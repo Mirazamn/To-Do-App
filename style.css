@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Kanit', sans-serif;
+    outline: none;
+}
+
+
+body {
+    background-color: var(--main-bg);
+}
+
+:root {
+    --main-text: #252525;
+    --main-bg: #F7F7F7;
+}
+
+
+
+.dark-mode {
+    --main-text: #F7F7F7;
+    --main-bg: #252525;
+}
+
+
+.note .completed-note {
+    --main-text: #666464;
+    color: var(--main-text);
+    text-decoration: line-through;
+}
+
+
+.inp-note {
+    width: 500px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--main-text);
+    background-color: var(--main-bg);
+}
+
+
+.inp-note::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--main-text);
+}
+
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+hr {
+    border: 1px solid #6C63FF80;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--main-text);
+} 
+
+
+header {
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.search-bar .actions .switch-mode {
+    padding: 10px 15px;
+}
+
+
+.add-note {
+    padding: 5px 17px;
+    border-radius: 100%;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    background-color: #6C63FF;
+    color: var(--main-bg);
+    font-size: 25px;
+    position: fixed;
+    right: 5%;
+    bottom: 50px;
+}
+
+
+/* Search Bar Styles */
+.search-bar input {
+    background: var(--main-bg);
+    border: 1px solid #6C63FF;
+    padding: 11px 16px;
+    border-radius: 10px;
+    color: var(--main-text);
+    width: 600px;
+    height: 48px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.search-bar input::placeholder {
+    color: #C3C1E5;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.actions button {
+    padding: 10px;
+    border: none;
+    background: #6C63FF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.actions button a {
+    color: #F7F7F7;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.search-bar > .flex {
+    gap: 16px;
+}
+
+
+.search-bar .flex .flex {
+    gap: 16px;
+}
+
+
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding: 50px 115px;
+    height: fit-content;
+    overflow: auto;
+}
+
+
+.note {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+
+.note:hover i {
+    display: grid;
+    color: #CDCDCD;
+    font-size: 18px;
+}
+
+
+.note i {
+    display: none;
+}
+
+
+.note i:hover {
+    color: rgba(255, 0, 0, 0.711);
+    cursor: pointer;
+}
+
+
+.note i:active .note {
+    display: none;
+}
+
+
+.checkbox {
+    transform: scale(1.9);
+    accent-color: #6C63FF;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+
+    /* Search Bar Styles */
+    .search-bar input {
+        width: 230px;
+    } 
+
+
+    main {
+        padding: 50px 10px;
+    }    
+}
